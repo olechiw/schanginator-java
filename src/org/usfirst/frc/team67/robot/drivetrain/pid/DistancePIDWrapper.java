@@ -1,21 +1,27 @@
-package org.usfirst.frc.team67.robot.drivetrain;
+package org.usfirst.frc.team67.robot.drivetrain.pid;
+
+import org.usfirst.frc.team67.robot.drivetrain.Constants;
+import org.usfirst.frc.team67.robot.drivetrain.Drivetrain;
 
 import edu.wpi.first.wpilibj.PIDOutput;
 import edu.wpi.first.wpilibj.PIDSource;
 import edu.wpi.first.wpilibj.PIDSourceType;
 
-public class AnglePIDWrapper implements PIDSource, PIDOutput
+// Distance PID Wrapper
+public class DistancePIDWrapper implements PIDSource, PIDOutput
 {
-	public AnglePIDWrapper(Drivetrain drivetrain)
+	public DistancePIDWrapper(Drivetrain drivetrain)
 	{
 		m_drivetrain = drivetrain;
 	}
 
+	@Override
 	public double pidGet()
 	{
 		return (m_drivetrain.GetYaw());
 	}
 
+	@Override
 	public void pidWrite(double output)
 	{
 		// SmartDashboard::PutNumber("Turn PID Output", output);

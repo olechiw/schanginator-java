@@ -1,5 +1,7 @@
 package org.usfirst.frc.team67.robot.drivetrain;
 
+import org.usfirst.frc.team67.robot.drivetrain.pid.AnglePIDWrapper;
+import org.usfirst.frc.team67.robot.drivetrain.pid.DistancePIDWrapper;
 import org.usfirst.frc.team67.robotutils.ThreePointInterpolation;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
